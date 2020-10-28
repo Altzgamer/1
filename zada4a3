@@ -1,0 +1,17 @@
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    int K;
+    cin >> N;
+    cin >> K;
+    int a;
+    a=K/N;
+    cout << a << endl;
+    
+    
+}
