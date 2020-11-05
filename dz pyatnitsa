@@ -1,0 +1,27 @@
+n = int(input("Сколько будет чисел? "))
+a = []
+sum1 = 0
+for i in range(n):
+    a.append(int(input()))
+ans1 = 0
+ans2 = 0
+for i in range(len(a)):
+    j = i - 1
+    key = a[i]
+    while a[j] > key and j >= 0:
+        a[j + 1] = a[j]
+        j -= 1
+    a[j + 1] = key
+if (len(a)) % 2 == 1:
+    ans1 = ((len(a)) // 2)
+    print("Медиана этого числа равна", a[ans1])
+else:
+    ans2 = (len(a) // 2)
+    sum1 = (a[ans2] + a[ans2 + 1]) / 2
+    print("Медиана этого числа равна", sum1)
+for i in range(len(a)):
+    if a[i] % 2 == 0:
+        a[i] = 0
+    else:
+        a[i] = 1
+print(a)
